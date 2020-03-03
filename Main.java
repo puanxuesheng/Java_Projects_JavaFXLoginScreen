@@ -31,7 +31,7 @@ public class Main extends Application {
         grid.setPadding(new Insets(25,25,25,25));
 
         //add new scene
-        Scene root = new Scene(grid,300,300);
+        Scene scene = new Scene(grid,300,300);
 
         //add all textfill
         Text sceneTitle = new Text("Please login: ");
@@ -72,7 +72,9 @@ public class Main extends Application {
 
         //setup the stage and set to show
         primaryStage.setTitle("My First Login Page using JavaFX");
-        primaryStage.setScene(root);
+        //setup the stylesheetvthe Main is the name of the class
+        scene.getStylesheets().add(Main.class.getResource("Style.css").toExternalForm());
+        primaryStage.setScene(scene);
         primaryStage.show();
     }
 
